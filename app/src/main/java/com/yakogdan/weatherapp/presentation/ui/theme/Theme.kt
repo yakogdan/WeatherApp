@@ -1,4 +1,4 @@
-package com.yakogdan.weatherapp.ui.theme
+package com.yakogdan.weatherapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
