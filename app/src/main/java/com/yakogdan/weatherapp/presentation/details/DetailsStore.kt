@@ -114,10 +114,6 @@ class DetailsStoreFactory @Inject constructor(
         override fun executeIntent(intent: Intent, getState: () -> State) {
             when (intent) {
                 Intent.ClickChangeFavouriteStatus -> {
-                    publish(Label.ClickBack)
-                }
-
-                Intent.ClickBack -> {
                     scope.launch {
                         val state = getState()
                         if (state.isFavourite) {
@@ -126,6 +122,10 @@ class DetailsStoreFactory @Inject constructor(
                             changeFavouriteStateUseCase.addToFavourite(state.city)
                         }
                     }
+                }
+
+                Intent.ClickBack -> {
+                    publish(Label.ClickBack)
                 }
             }
         }

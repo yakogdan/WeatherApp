@@ -2,7 +2,7 @@ package com.yakogdan.weatherapp.presentation.root
 
 import androidx.compose.runtime.Composable
 import com.arkivanov.decompose.extensions.compose.jetbrains.stack.Children
-import com.yakogdan.weatherapp.presentation.details.DetailContent
+import com.yakogdan.weatherapp.presentation.details.DetailsContent
 import com.yakogdan.weatherapp.presentation.favourite.FavouriteContent
 import com.yakogdan.weatherapp.presentation.search.SearchContent
 import com.yakogdan.weatherapp.presentation.ui.theme.WeatherAppTheme
@@ -13,7 +13,7 @@ fun RootContent(component: RootComponent) {
         Children(stack = component.stack) {
             when (val instance = it.instance) {
                 is RootComponent.Child.Details -> {
-                    DetailContent(component = instance.component)
+                    DetailsContent(component = instance.component)
                 }
 
                 is RootComponent.Child.Favourite -> {

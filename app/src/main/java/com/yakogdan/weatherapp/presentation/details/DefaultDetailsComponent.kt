@@ -28,7 +28,7 @@ class DefaultDetailsComponent @AssistedInject constructor(
             store.labels.collect {
                 when (it) {
                     DetailsStore.Label.ClickBack -> {
-                        onBackClicked
+                        onBackClicked()
                     }
                 }
             }
